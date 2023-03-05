@@ -1,0 +1,29 @@
+Authentication unit
+
+1. controller
+
+    REGISTER: 
+        -> new user register
+        -> if an existing user tries to register
+        -> keys present in request & response payload
+        -> saving of hashed password in db
+        -> appropriate status codes
+        -> returning important keys in response payload
+
+    LOGIN: 
+        -> existing user login
+        -> new user must not be able to login until he registers
+        -> login via incorrect password
+        -> returning token and other user info keys to frontend
+        -> appropriate status codes 
+
+2. Model
+    -> all user related info must be stored without redundancy
+    -> email validations
+    -> unique or foreign key constraints
+    -> casing of all keys
+
+
+MIDDLEWARE unit
+    -> adding of user id or other important keys in request or response object
+    -> token verification to hit all end points
