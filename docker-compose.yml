@@ -10,7 +10,7 @@ services:
       - 3001:3001
 
     environment:
-      - MONOGODB_URL=mongodb+srv://AngadRajSingh:root@cluster0.ogdrv.mongodb.net/?retryWrites=true&w=majority
+      - MONOGODB_URL=<MONOGODB_URL>
       - NODE_ENV=production
       - PORT=3001
       - JWT_TOKEN=AngadRajSingh
