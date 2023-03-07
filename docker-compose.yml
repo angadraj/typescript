@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  api: 
+    build:
+      context: .
+      target: production
+      
+    ports:
+      - 3001:3001
+
+    environment:
+      - MONOGODB_URL=mongodb+srv://AngadRajSingh:root@cluster0.ogdrv.mongodb.net/?retryWrites=true&w=majority
+      - NODE_ENV=production
+      - PORT=3001
+      - JWT_TOKEN=AngadRajSingh

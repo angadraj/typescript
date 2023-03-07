@@ -10,12 +10,12 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-
+const PORT = process.env.PORT;
+logger.info(`Active Port is ${PORT}`);
 
 app.use('/api/v1', router);
 
-app.listen(3001, async () => {
-    // Logging.info(`App listening at ${process.env.PORT}`)
-    logger.info(`App listening at ${process.env.PORT}`)
+app.listen(PORT, async () => {
+    logger.info(`App listening at ${PORT}`)
     await connectDB();
 })
